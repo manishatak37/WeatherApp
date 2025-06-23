@@ -20,7 +20,7 @@ import java.util.Locale
 
 
 class MainActivity : AppCompatActivity() {
-    val apiKey = getString(R.string.ApiKey)
+    lateinit var apiKey: String
     private  val binding : ActivityMainBinding by lazy{
         ActivityMainBinding.inflate(layoutInflater)
     }
@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        apiKey = getString(R.string.ApiKey)
 
         fetchWeatherData("Jaipur")
         SearchCity()
