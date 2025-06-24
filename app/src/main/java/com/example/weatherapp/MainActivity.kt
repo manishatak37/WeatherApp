@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        apiKey = getString(R.string.ApiKey)
+        apiKey = BuildConfig.API_KEY
+
 
         fetchWeatherData("Jaipur")
         SearchCity()
